@@ -6,9 +6,9 @@ jobs:
   run-shell-commands:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
+      - name:  Checkout
         users: actions/checkout@v1
-      - name: Multi line string
+      - name:  Multi line string
         run: | 
           pwd
           ls -a
