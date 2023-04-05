@@ -1,10 +1,13 @@
+# Specify the provider and region
 provider "aws" {
-  region = "us-west-1"
+  region = "us-east-1"
 }
 
-resource "aws_vpc" "actions_vs" {
-  cidr_block = "10.0.0.0/16"
-tags = {
-    Name ="Class30"
-    }
+# Define the EC2 instance
+resource "aws_instance" "example" {
+  ami           = "ami-0c55b159cbfafe1f0"
+  instance_type = "t2.micro"
+  tags = {
+    Name = "Example EC2 Instance"
+  }
 }
