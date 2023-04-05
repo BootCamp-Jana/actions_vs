@@ -2,6 +2,7 @@ name: shell commands
 
 on:
   - push
+  
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -24,6 +25,9 @@ jobs:
         run:  terraform plan
       - name: terraform apply
         run:  terraform apply-auto-approve
+      #- name:terraform destroy
+      #- name:terraform destroy-auto-approve
+
       
 
    
