@@ -23,8 +23,8 @@ jobs:
         run:  terraform validate
       - name: Terraform plan
         run:  terraform plan
-      - name: Terraform apply
-        run:  terraform apply -auto-approve
+      #- name: Terraform apply
+      #  run:  terraform apply -auto-approve
       #- name:terraform destroy
       #- name:terraform destroy -auto-approve
 
